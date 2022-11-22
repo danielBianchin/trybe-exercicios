@@ -9,7 +9,7 @@ h1 {
     text-align: center;
     width: 200px;
     margin-left: 40%;
-    list-style-type:none;
+    display:block;
   }
 
   .second {
@@ -18,8 +18,7 @@ h1 {
     height: 50px;
     text-align: center;
     width: 300px;
-    display: inline-block;
-    margin-left: 30%;
+    margin-left: 29%;
   }
 
   .third {
@@ -28,17 +27,17 @@ h1 {
     height: 50px;
     text-align: center;
     width: 300px;
-    display: inline-block;
   }
+
+li {
+  display: inline-block;
+}
 
 h3 {
   margin-left: 40%;
 }
- .display {
-  display:inline-block;
- }
-
- .margin {
+ 
+.margin {
   margin-left: 30%;
  }
 
