@@ -3,6 +3,7 @@ let soma = 0;
 let mediaAritmetica = 0;
 let maiorValor = 0;
 let qtdImpar = 0;
+let menorValor = numbers[0];
 
 for (let number of numbers) {
     // console.log(number);
@@ -12,6 +13,9 @@ for (let number of numbers) {
     }
     if (number % 2 != 0) {
         qtdImpar = qtdImpar + 1;
+    }
+    if (number < menorValor) {
+        menorValor = number;
     }
     
 }
@@ -33,3 +37,5 @@ if (qtdImpar != 0) {
 } else {
     console.log("Nenhum valor ímpar encontrado");
 }
+
+console.log ("O menor valor do array é:", menorValor);
