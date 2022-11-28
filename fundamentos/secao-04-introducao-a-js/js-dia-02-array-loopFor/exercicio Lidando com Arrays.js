@@ -41,7 +41,13 @@ if (qtdImpar != 0) {
 console.log ("O menor valor do array é:", menorValor);
 
 array25 = [];
-for (index = 1; index <= 25; index +=1) {
+for (let index = 1; index <= 25; index +=1) {
     array25.push(index)
 }
 console.log(array25);
+
+console.log("A divisão por 2 de cada um dos elementos do array25 é:");
+
+for (let value of array25) {
+    console.log(value/2);
+}
