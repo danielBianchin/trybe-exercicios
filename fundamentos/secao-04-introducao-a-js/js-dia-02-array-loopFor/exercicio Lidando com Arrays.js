@@ -39,3 +39,9 @@ if (qtdImpar != 0) {
 }
 
 console.log ("O menor valor do array é:", menorValor);
+
+array25 = [];
+for (index = 1; index <= 25; index +=1) {
+    array25.push(index)
+}
+console.log(array25);
