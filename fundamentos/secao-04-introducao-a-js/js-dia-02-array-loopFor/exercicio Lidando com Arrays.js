@@ -2,6 +2,7 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let soma = 0;
 let mediaAritmetica = 0;
 let maiorValor = 0;
+let qtdImpar = 0;
 
 for (let number of numbers) {
     // console.log(number);
@@ -9,6 +10,10 @@ for (let number of numbers) {
     if (number > maiorValor) {
         maiorValor = number;
     }
+    if (number % 2 != 0) {
+        qtdImpar = qtdImpar + 1;
+    }
+    
 }
 
 console.log ("A soma de todos os valores contidos no array é:", soma);
@@ -23,3 +28,8 @@ if (mediaAritmetica > 20) {
 
 console.log ("O maior valor do array é:", maiorValor);
 
+if (qtdImpar != 0) {
+    console.log("A quantidade de valores ímpares no array é de:", qtdImpar);
+} else {
+    console.log("Nenhum valor ímpar encontrado");
+}
