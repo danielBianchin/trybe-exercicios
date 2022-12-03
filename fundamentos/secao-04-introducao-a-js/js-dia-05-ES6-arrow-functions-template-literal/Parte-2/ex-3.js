@@ -1,12 +1,3 @@
-const longestWord = (string) => {
-    const wordArray = string.split(' ');
-    let maiorPalavra = '';
-    for (const word of wordArray) {
-        if (word.length > maiorPalavra.length)  {
-            maiorPalavra = word;
-        }
-    }
-    return maiorPalavra;
-}
+const longestWord = (string) => string.split(' ').sort((a, b) => (b.length - a.length))[0];
 
 console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
