@@ -6,7 +6,19 @@ const substituaX = (nome) => {
         splitada[index] = nome;
         }
     }
-   console.log(splitada.join(' '));
+   return (splitada.join(' '));
 }
 
-substituaX('Bebeto');
+const minhasSkills = (retornoFuncao1) => {
+    const skills = ['bash', 'git', 'js'];
+    let concatenacao = `${retornoFuncao1}
+    Minhas três principais habilidades são:
+    ${skills[0]}
+    ${skills[1]}
+    ${skills[2]}`
+    return concatenacao;
+}
+
+console.log(minhasSkills(substituaX('Bebeto')));
+
+
