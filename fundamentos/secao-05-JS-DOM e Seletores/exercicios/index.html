@@ -59,13 +59,18 @@
         document.getElementsByTagName('h1')[0].innerText = "Desafio - JavaScript";
       }
       corrigeH1();
+      
       function modificaTextoMaiusculo() {
-        console.log(document.getElementsByTagName('p')[2]);
-        document.getElementsByTagName('p')[0].innerText = 'TEXTO PADRÃO DO NOSSO SITE'
-        
-        
+        let paragraph = document.getElementsByTagName('p')[0];
+        paragraph.innerHTML = paragraph.innerHTML.toUpperCase();
       }
       modificaTextoMaiusculo();
+      
+      function exibirTagsPNoConsole() {
+      for (tag of document.getElementsByTagName('p'))
+          console.log(tag.innerHTML);      
+      }
+      exibirTagsPNoConsole();
     </script>
   </body>
 </html>
