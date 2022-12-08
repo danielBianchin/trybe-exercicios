@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Desafio - JavaEscripito</h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <script>
+      function mudaTextoNaP(){
+        const primeiraSelecao = document.getElementsByClassName('center-content')[0]
+      primeiraSelecao.getElementsByTagName('p')[1].innerText = 'Daqui a 2 anos me vejo como um Desenvolvedor Web realizado e muito feliz! :D';
+      }
+      mudaTextoNaP();
+      function mudaCorQuadrado() {
+        document.getElementsByClassName('main-content')[0].style.backgroundColor = "rgb(76,164,109)"
+      }
+      mudaCorQuadrado();
+      function mudaCorQuadradoCentral() {
+        document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white'
+      }
+      mudaCorQuadradoCentral();
+      function corrigeH1() {
+        document.getElementsByTagName('h1')[0].innerText = "Desafio - JavaScript";
+      }
+      corrigeH1();
+      
+      function modificaTextoMaiusculo() {
+        let paragraph = document.getElementsByTagName('p')[0];
+        paragraph.innerHTML = paragraph.innerHTML.toUpperCase();
+      }
+      modificaTextoMaiusculo();
+      
+      function exibirTagsPNoConsole() {
+      for (tag of document.getElementsByTagName('p'))
+          console.log(tag.innerHTML);      
+      }
+      exibirTagsPNoConsole();
+    </script>
+  </body>
+</html>
