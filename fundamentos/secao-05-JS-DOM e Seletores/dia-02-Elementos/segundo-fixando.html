@@ -10,8 +10,18 @@
       <section id="quartoEUltimoFilho"></section>
     </section>
     <script>
-        const novaSection = document.createElement('section')
+        const novaSection = document.createElement('section');
         novaSection.id = 'ola-novo-irmao';
-        document.querySelector('#pai').appendChild(novaSection)
+        document.querySelector('#pai').appendChild(novaSection);
+
+        const novoFilho = document.createElement('section');
+        novoFilho.id = 'novo-filho';
+        document.querySelector('#elementoOndeVoceEsta').appendChild(novoFilho);
+
+        const maisUmFilho = document.createElement('h2');
+        maisUmFilho.id = 'outro-filho';
+        document.getElementById('primeiroFilhoDoFilho').appendChild(maisUmFilho);
+
+        console.log(document.getElementById('outro-filho').parentNode.parentNode.nextElementSibling);
     </script>
   </main>
