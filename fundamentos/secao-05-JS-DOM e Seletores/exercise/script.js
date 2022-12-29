@@ -20,7 +20,12 @@ const createCalendar = () => {
   for (value of decemberDaysList) {
     const createDay = document.createElement('li');
     createDay.innerHTML = value;
-
+    createDay.className = 'day'
+    if ((value === 24) || (value === 25) || (value === 31)) {
+      createDay.className = 'day holiday';
+    } else if ((value === 4) || (value === 11) || (value === 18) || (value ===25)) {
+      createDay.className = 'day friday';
+    }
     pathToDays.appendChild(createDay);
   };
 }
