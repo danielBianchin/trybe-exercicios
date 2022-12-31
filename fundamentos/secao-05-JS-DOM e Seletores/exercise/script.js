@@ -21,11 +21,13 @@ const createCalendar = () => {
     const createDay = document.createElement('li');
     createDay.innerHTML = value;
     createDay.className = 'day'
-    if ((value === 24) || (value === 25) || (value === 31)) {
+    if ((value === 24) || (value === 31)) {
       createDay.className = 'day holiday';
-    } else if ((value === 4) || (value === 11) || (value === 18) || (value ===25)) {
+    } else if ((value === 4) || (value === 11) || (value === 18)) {
       createDay.className = 'day friday';
-    }
+    } else if (value === 25) {
+      createDay.className = 'day friday holiday'
+    } 
     pathToDays.appendChild(createDay);
   };
 }
@@ -34,13 +36,17 @@ createCalendar();
 
 const createButton = (string) => {
   const botao = document.createElement('button');
-  botao.id = "btn-holiday";
+  if (string === 'Feriados'){
+    botao.id = 'btn-holiday';
+  } else if (string === 'Sexta-feira')
+    botao.id = 'btn-friday'
   botao.innerHTML = string;
   document.querySelector(".buttons-container").appendChild(botao);
   
 }
 
 createButton('Feriados');
+createButton('Sexta-feira')
 
 const mudaCorFundo = () => {
   const feriados = document.getElementsByClassName("holiday");
@@ -53,5 +59,23 @@ const mudaCorFundo = () => {
   }
 }
 
-document.querySelector("#btn-holiday").addEventListener("click", mudaCorFundo);
+const mudaTexto = () => {
+  fridays = [4,11,18,25]
+  const sexta = document.getElementsByClassName("friday")
+  for (index in sexta) {
+    imagem = document.createElement('img');
+    imagem.src = '22000063.webp';
+    imagem.width = '50'
+
+    if (sexta[index].innerHTML == fridays[index]) {
+      sexta[index].innerHTML = '';
+      sexta[index].appendChild(imagem);
+    } else {
+      sexta[index].innerHTML = fridays[index]
+    }
+  }
+}
+
+document.getElementById('btn-holiday').addEventListener('click', mudaCorFundo);
+document.getElementById('btn-friday').addEventListener('click', mudaTexto);
 
