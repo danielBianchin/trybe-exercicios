@@ -31,3 +31,27 @@ const createCalendar = () => {
 }
 
 createCalendar();
+
+const createButton = (string) => {
+  const botao = document.createElement('button');
+  botao.id = "btn-holiday";
+  botao.innerHTML = string;
+  document.querySelector(".buttons-container").appendChild(botao);
+  
+}
+
+createButton('Feriados');
+
+const mudaCorFundo = () => {
+  const feriados = document.getElementsByClassName("holiday");
+  for (index in feriados) {
+    if (feriados[index].style.backgroundColor != 'orange') {
+      feriados[index].style.backgroundColor = 'orange';
+    } else {
+      feriados[index].style.backgroundColor = 'rgb(238,238,238)';
+    }
+  }
+}
+
+document.querySelector("#btn-holiday").addEventListener("click", mudaCorFundo);
+
