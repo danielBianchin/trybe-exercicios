@@ -72,6 +72,19 @@ const mudaTexto = () => {
   }
 }
 
+const zoom = (event) => {
+  event.target.style.fontSize = '30px';
+  event.target.style.fontWeight = '1000';
+}
+
+const offZoom = (event) => {
+  event.target.style.fontSize = '20px';
+  event.target.style.fontWeight = '200';
+}
+
 document.getElementById('btn-holiday').addEventListener('click', mudaCorFundo);
 document.getElementById('btn-friday').addEventListener('click', mudaTexto);
+document.getElementById('days').addEventListener('mouseover', zoom);
+document.getElementById('days').addEventListener('mouseout', offZoom)
+
 
