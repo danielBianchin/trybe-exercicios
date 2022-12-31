@@ -63,13 +63,9 @@ const mudaTexto = () => {
   fridays = [4,11,18,25]
   const sexta = document.getElementsByClassName("friday")
   for (index in sexta) {
-    imagem = document.createElement('img');
-    imagem.src = '22000063.webp';
-    imagem.width = '50'
 
     if (sexta[index].innerHTML == fridays[index]) {
-      sexta[index].innerHTML = '';
-      sexta[index].appendChild(imagem);
+      sexta[index].innerHTML = 'sextou';
     } else {
       sexta[index].innerHTML = fridays[index]
     }
