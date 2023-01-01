@@ -85,6 +85,16 @@ const offZoom = (event) => {
 document.getElementById('btn-holiday').addEventListener('click', mudaCorFundo);
 document.getElementById('btn-friday').addEventListener('click', mudaTexto);
 document.getElementById('days').addEventListener('mouseover', zoom);
-document.getElementById('days').addEventListener('mouseout', offZoom)
+document.getElementById('days').addEventListener('mouseout', offZoom);
+
+const adicionaTarefa = (tarefa) => {
+  let criandoElemento = document.createElement('span');
+  criandoElemento.innerHTML = tarefa;
+  document.querySelector('.my-tasks').appendChild(criandoElemento)
+}
+
+adicionaTarefa('cozinhar');
+
+console.log(document.getElementsByClassName('my-tasks'));
 
 
