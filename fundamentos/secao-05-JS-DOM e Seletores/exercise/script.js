@@ -93,8 +93,15 @@ const adicionaTarefa = (tarefa) => {
   document.querySelector('.my-tasks').appendChild(criandoElemento)
 }
 
-adicionaTarefa('cozinhar');
+adicionaTarefa('lavar roupa');
 
-console.log(document.getElementsByClassName('my-tasks'));
+const adicionaLegenda = (cor) => {
+  let criandoElemento = document.createElement('div');
+  criandoElemento.className = 'task';
+  criandoElemento.style.backgroundColor = cor;
+  document.querySelector('.my-tasks').appendChild(criandoElemento);
+}
+
+adicionaLegenda('green')
 
 
