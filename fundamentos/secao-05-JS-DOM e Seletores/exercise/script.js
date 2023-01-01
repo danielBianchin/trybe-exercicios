@@ -103,8 +103,6 @@ const adicionaLegenda = (cor) => {
 }
 
 adicionaLegenda('green')
-adicionaTarefa('cozinhar');
-adicionaLegenda('purple')
 
 const selecionaTarefa = (event) => {
   if (event.target.className != 'task selected') {
@@ -115,5 +113,20 @@ const selecionaTarefa = (event) => {
 }
 
 document.querySelector('.my-tasks').addEventListener('click', selecionaTarefa);
+
+const atribuirCor = (event) => {
+  corTarefa = document.querySelector('.selected').style.backgroundColor;
+  corCalendario = event.target.style.backgroundColor;
+  if (corCalendario != corTarefa) {
+    event.target.style.backgroundColor = corTarefa;
+  } else {
+    event.target.style.backgroundColor = '';
+  }
+  ;
+}
+
+document.getElementById('days').addEventListener('click', atribuirCor);
+
+
 
 
