@@ -103,5 +103,17 @@ const adicionaLegenda = (cor) => {
 }
 
 adicionaLegenda('green')
+adicionaTarefa('cozinhar');
+adicionaLegenda('purple')
+
+const selecionaTarefa = (event) => {
+  if (event.target.className != 'task selected') {
+    event.target.className = 'task selected';
+  } else {
+    event.target.className = 'task';
+  }
+}
+
+document.querySelector('.my-tasks').addEventListener('click', selecionaTarefa);
 
 
