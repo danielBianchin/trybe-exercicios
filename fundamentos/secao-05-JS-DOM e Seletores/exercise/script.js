@@ -127,6 +127,31 @@ const atribuirCor = (event) => {
 
 document.getElementById('days').addEventListener('click', atribuirCor);
 
+const adicionarCompromissos = () => {
+  document.getElementById('btn-add').addEventListener('click', () => {
+    const novoCompromisso = document.createElement('li');
+    novoCompromisso.innerHTML = document.getElementById('task-input').value
+    if (novoCompromisso.innerHTML != '') {
+    document.querySelector('.task-list-container').appendChild(novoCompromisso)
+    document.getElementById('task-input').value = ''
+    } else {
+      alert('Erro!')
+    }
+    });
+  
+  document.getElementById('task-input').addEventListener('keyup', (event) => {
+    if (event.key === 'Enter' && document.getElementById('task-input').value.length > 0) {
+      const novoCompromisso = document.createElement('li');
+      novoCompromisso.innerHTML = document.getElementById('task-input').value
+      document.querySelector('.task-list-container').appendChild(novoCompromisso)
+      document.getElementById('task-input').value = ''
+    }
+  });
+}
+
+adicionarCompromissos();
+
+
 
 
 
